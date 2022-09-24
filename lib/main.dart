@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -83,6 +83,14 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ],
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('CONVERT'),
+                  style: ElevatedButton.styleFrom(
+                      minimumSize: Size.fromHeight(50))),
             )
           ],
         ),
