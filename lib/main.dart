@@ -12,18 +12,20 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
-  TextEditingController text1=TextEditingController(text: '');
+
+TextEditingController text1 = TextEditingController(text: '');
 
 class _MyAppState extends State<MyApp> {
-  String name='0';
-  double a=0;
-  
-    func(){
-      a=double.parse(text1.text)*0.000011085;
+  String name = '0';
+  double a = 0;
+
+  func() {
+    a = double.parse(text1.text) * 0.00011085;
     setState(() {
-      name='\$$a';
+      name = '\$${a.toStringAsPrecision(2)}';
     });
-    }
+  }
+
   @override
   Widget build(BuildContext context) {
     //String name=text1.text;
