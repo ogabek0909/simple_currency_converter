@@ -45,11 +45,22 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.only(top: 100, left: 20, right: 20),
               child: TextField(
                 decoration: InputDecoration(
-                    label: Text('Amout'),
+                    label: Text('Amount'),
                     border: OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                             color: Color.fromARGB(100, 107, 107, 107)))),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              child: Row(
+                children: [
+                  Text(
+                    '🇺🇿',
+                    style: TextStyle(fontSize: 80),
+                  )
+                ],
               ),
             )
           ],
