@@ -56,9 +56,15 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Row(
                 children: [
-                  Text(
-                    '🇺🇿',
-                    style: TextStyle(fontSize: 80),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('From'),
+                      Text(
+                        '🇺🇿',
+                        style: TextStyle(fontSize: 60),
+                      ),
+                    ],
                   )
                 ],
               ),
