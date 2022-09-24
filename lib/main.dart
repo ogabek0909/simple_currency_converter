@@ -103,9 +103,12 @@ class _MyAppState extends State<MyApp> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
                   onPressed: func,
-                  child: Text('CONVERT'),
+                  child: Text(
+                    'CONVERT',
+                    style: TextStyle(fontSize: 25),
+                  ),
                   style: ElevatedButton.styleFrom(
-                      minimumSize: Size.fromHeight(50))),
+                      minimumSize: Size.fromHeight(60))),
             )
           ],
         ),
