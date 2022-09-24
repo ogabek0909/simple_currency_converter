@@ -12,10 +12,21 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
+  TextEditingController text1=TextEditingController(text: '');
 
 class _MyAppState extends State<MyApp> {
+  String name='0';
+  double a=0;
+  
+    func(){
+      a=double.parse(text1.text)*0.000011085;
+    setState(() {
+      name='\$$a';
+    });
+    }
   @override
   Widget build(BuildContext context) {
+    //String name=text1.text;
     return MaterialApp(
       home: Scaffold(
           body: Center(
@@ -34,7 +45,7 @@ class _MyAppState extends State<MyApp> {
             Padding(
               padding: EdgeInsets.only(top: 15),
               child: Text(
-                '\$100',
+                name,
                 style: TextStyle(
                   fontSize: 64,
                   color: Color.fromARGB(100, 107, 107, 107),
@@ -44,6 +55,8 @@ class _MyAppState extends State<MyApp> {
             Padding(
               padding: const EdgeInsets.only(top: 100, left: 20, right: 20),
               child: TextField(
+                controller: text1,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                     label: Text('Amount'),
                     border: OutlineInputBorder(),
@@ -87,7 +100,7 @@ class _MyAppState extends State<MyApp> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: func,
                   child: Text('CONVERT'),
                   style: ElevatedButton.styleFrom(
                       minimumSize: Size.fromHeight(50))),
