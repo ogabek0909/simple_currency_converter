@@ -65,7 +65,21 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontSize: 60),
                       ),
                     ],
-                  )
+                  ),
+                  Icon(
+                    Icons.sync_alt,
+                    size: 60,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('To'),
+                      Text(
+                        '🇺🇸',
+                        style: TextStyle(fontSize: 60),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             )
